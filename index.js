@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = process.argv[2] || 5000;
+const port = process.argv[2] || 3000;
 
 app.use(express.static('.', {
     // Set content-encoding header for gzipped vector tiles
