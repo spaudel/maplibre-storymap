@@ -294,6 +294,7 @@
     <div id="map"></div>
     <div id="mapInset"></div>
     <div id="story"></div>
+    /* <script src="./chapter1.js"></script> */
     <script src="./config.js"></script>
     <script src="./sources.js"></script>
     <script>
@@ -422,6 +423,9 @@
             if (record.image) {
                 var image = new Image();
                 image.src = record.image;
+                image.style.width = '500px'; // e.g., '500px', '50%', 'auto'
+                image.style.height = '500px';
+                image.style.margin = "0 auto"
                 chapter.appendChild(image);
             }
 
@@ -493,7 +497,7 @@
         if (config.bookmarks) {
             var bookmarksText = "<strong>Bookmarks</strong>: ";
             for (i = 0; i < config.chapters.length; i++) {
-                if (config.chapters[i].title) {
+                if (config.chapters[i].setBookmark) {
                     bookmarksText += `<a href=#${config.chapters[i].id}>${config.chapters[i].title}</a>`;
                     if (i != config.chapters.length - 1) {
                         bookmarksText += " | ";

@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/digidem/maplibre-storymap/issues"
   },
-  "homepage": "https://github.com/digidem/maplibre-storymap#readme"
+  "homepage": "https://github.com/digidem/maplibre-storymap#readme",
+  "devDependencies": {
+    "prettier": "^3.8.0"
+  }
 }
